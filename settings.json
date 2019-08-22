@@ -1,0 +1,9 @@
+{"instance-url": "https://botsin.space",
+ "bot-name": "Your Bot's Name!",
+ "client-key": "get these fields from your bot's user settings.",
+ "client-secret": "it'll be three long fields of hex numbers",
+ "access-token": "bottom text",
+ "corpus-file": "a newline-delimited plain text file",
+ "interval": 21600}
+ 
+

@@ -1,0 +1,18 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+(progn ;;init forms
+  (ros:ensure-asdf)
+  #+quicklisp(ql:quickload '(:quotebot) :silent t))
+  
+
+(defpackage :ros.script.quotebot.3750148059
+  (:use :cl))
+(in-package :ros.script.quotebot.3750148059)
+
+(defun main (&optional (settings "settings.json") &rest argv)
+  (declare (ignorable argv))
+  (quotebot:run (quotebot:from-json settings)))
+;;; vim: set ft=lisp lisp:

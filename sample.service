@@ -1,0 +1,14 @@
+[Unit]
+Description=Mastodon Quote Bot
+After=network-online.target
+
+[Service]
+Type=simple
+User=mastobot
+Group=mastobot
+WorkingDirectory=/home/mastobot/botname/
+ExecStart=/opt/quotebot settings.json
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
